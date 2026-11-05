@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- encoding, so all letters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- makes the site fit phone screens -->
+  <title>Aidos Zhumabaev</title> <!-- text on the browser tab -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- speeds up font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet"> <!-- Inter font from Google -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 10%27><circle cx=%275%27 cy=%275%27 r=%275%27 fill=%27%23ff7a00%27/></svg>"> <!-- small orange dot on the tab -->
+  <link rel="stylesheet" href="style.css"> <!-- connect the styles file -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">AIDOS <span>ZHUMABAEV</span></div> <!-- span lets us paint one word orange -->
+    <nav>
+      <a href="#home" class="active">HOME</a> <!-- JS moves "active" while you scroll; href="#id" scrolls to the block with that id -->
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#education">EDUCATION</a>
+    </nav>
+    <a href="cv.pdf" download class="pill">DOWNLOAD CV</a> <!-- put your cv.pdf in the same folder -->
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div>
+      <h1>Hi,<br>I'm <span>AIDOS</span></h1>
+      <p>COMPUTER SCIENCE STUDENT</p>
+      <a href="#contact" class="pill">CONTACT ME</a>
+    </div>
+    <div class="art"> <!-- decoration made of two shapes -->
+      <div class="square"></div>
+      <div class="circle">
+        <img src="5431740479948135202.jpg" alt="Aidos"> <!-- your photo -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="center reveal"> <!-- reveal = fades in when scrolled to -->
+    <p class="small">MY RECENT</p>
+    <h2 class="orange">PROJECTS</h2>
+    <div class="row"> <!-- one row with three cards -->
+      <div class="card">
+        <div class="img">
+          <img src="images.jpg" alt="War Thunder"> <!-- project picture -->
+        </div>
+        <h3>WAR THUNDER AD SITE</h3>
+        <p>A fun advertising web page for War Thunder, made just for laughs with HTML, CSS and JS.</p>
+        <a href="https://github.com/A1dos/WARTHUNEDFDEDF.git" target="_blank" class="view">VIEW</a> <!-- target="_blank" opens a new tab -->
+      </div>
+      <div class="card">
+        <div class="img"></div>
+        <h3>COMING SOON</h3>
+        <p>My next project will appear here.</p>
+        <a href="#" class="view">VIEW</a>
+      </div>
+      <div class="card">
+        <div class="img"></div>
+        <h3>COMING SOON</h3>
+        <p>My next project will appear here.</p>
+        <a href="#" class="view">VIEW</a>
+      </div>
+    </div>
+    <a href="https://github.com/A1dos" target="_blank" class="pill wide">View All...</a>
+  </section>
+
+  <!-- ABOUT ME (with tabs) -->
+  <section id="about" class="about reveal">
+    <div class="art flip"> <!-- flip = mirrored position of the shapes -->
+      <div class="square"></div>
+      <div class="circle">
+        <img src="5431740479948135202.jpg" alt="Aidos"> <!-- your photo -->
+      </div>
+    </div>
+    <div class="text">
+      <h2 class="outline">ABOUT ME</h2> <!-- outline = orange outline instead of fill -->
+      <p>Hey there, I'm <span class="orange">AIDOS ZHUMABAEV</span>, a second-year student from Bishkek who wants to become a software tester. I find bugs for fun and I'm learning how websites work.</p>
+
+      <div class="tabs"> <!-- tab buttons; data-tab stores the id of the block to show -->
+        <button class="tab active" data-tab="t-about">ABOUT</button>
+        <button class="tab" data-tab="t-skills">SKILLS</button>
+        <button class="tab" data-tab="t-edu">EDUCATION</button>
+      </div>
+
+      <div class="panel show" id="t-about"> <!-- "show" = this block is visible -->
+        <p>I live in Bishkek, Kyrgyzstan. I studied at Lyceum No. 5 and now I study at Ala-Too college.</p>
+        <p>My English level is C1, and I know a little HTML, CSS and JavaScript.</p>
+        <p>Outside of studying I practice judo. It taught me discipline and patience, and both help a lot when you test software.</p>
+      </div>
+
+      <div class="panel" id="t-skills">
+        <div class="skills">
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/html5/html5-original.svg" alt="">HTML</div> <!-- icon + name -->
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/css3/css3-original.svg" alt="">CSS</div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/javascript/javascript-original.svg" alt="">JavaScript</div>
+          <div><span>🌐</span>English C1</div>
+          <div><span>🐞</span>QA Testing (learning)</div>
+          <div><span>🥋</span>Judo</div>
+        </div>
+      </div>
+
+      <div class="panel" id="t-edu">
+        <p class="label">EDUCATION</p>
+        <p class="orange title">COLLEGE STUDENT, 2ND YEAR</p>
+        <p>ALA-TOO COLLEGE, BISHKEK</p>
+        <p>Program: POVTAR</p>
+        <p class="label">PREVIOUS SCHOOL</p>
+        <p>Lyceum No. 5</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services reveal">
+    <div class="top"> <!-- orange top part -->
+      <h2>SERVICES</h2>
+      <p>I'm a junior who is just starting out, but I take every task seriously. I can check your website or app, find problems, and describe them clearly so they are easy to fix.</p>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="img"><img src="images/service-web.svg" alt="MANUAL TESTING"></div>
+        <h3>MANUAL TESTING</h3>
+      </div>
+      <div class="card">
+        <div class="img"><img src="images/service-bug.svg" alt="BUG REPORTS"></div>
+        <h3>BUG REPORTS</h3>
+      </div>
+      <div class="card">
+        <div class="img"><img src="images/service-code.svg" alt="SIMPLE WEB PAGES"></div>
+        <h3>SIMPLE WEB PAGES</h3>
+      </div>
+    </div>
+    <a href="#contact" class="pill wide">Hire me...</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <div class="info">
+      <h2>GET IN TOUCH</h2>
+      <p class="bold">I'd love to hear from you! Whether you have questions, feedback, or just want to say hello, there are several ways to reach me.</p>
+      <div class="line"><span class="dot"></span>n7001504@gmail.com</div> <!-- .dot = small orange square -->
+      <div class="line"><span class="dot"></span>+996 709 507 373</div>
+      <div class="line"><span class="dot"></span>Bishkek, Kyrgyzstan</div>
+      <div class="line"><span class="dot"></span>Username: lol4ok1</div>
+    </div>
+    <form id="form"> <!-- id lets JS find the form -->
+      <h3>SAY SOMETHING</h3>
+      <input type="text" id="name" placeholder="Your Name" required> <!-- required = cannot send it empty -->
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Message..." required></textarea>
+      <button type="submit">SEND</button>
+    </form>
+  </section>
+
+  <!-- FOOTER (orange part at the bottom) -->
+  <footer id="education">
+    <nav>
+      <a href="#home" class="pill white">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#about">EDUCATION</a>
+    </nav>
+    <div class="social"> <!-- three white circles with links -->
+      <a href="https://github.com/A1dos" target="_blank">GH</a>
+      <a href="mailto:n7001504@gmail.com">@</a>
+      <a href="tel:+996709507373">Tel</a>
+    </div>
+    <p>© 2024 · Aidos Zhumabaev. All rights reserved</p>
+  </footer>
+
+  <a href="#home" id="top">↑</a> <!-- back to top button -->
+
+  <script src="script.js"></script> <!-- JS is connected at the very end -->
+</body>
+</html>
